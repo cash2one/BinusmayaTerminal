@@ -70,9 +70,9 @@ f_op.close()
 
 # temporary fix when encounter digit 2 recognize as 'Z'
 if s[0] == 'Z':
-    s[0] = 2
+    s = '2' + s[1:]
 elif s[2] == 'Z':
-    s[2] = 2
+    s = s[:2] + '2' + s[3:]
 
 # calculate captcha
 if s[1] == '+':
